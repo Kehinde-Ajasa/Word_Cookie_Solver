@@ -10,7 +10,7 @@ def get_user_input():
 
 def open_dict_file():
     """function to help open up the dictionary file for accessing all the english language words"""
-    with open('C:\\Users\\MY PC\\Desktop\\PYTHON PROJECTS\\Dictionary.txt', 'r') as file:  # opening the file
+    with open('C:\\Users\\MY PC\\PycharmProjects\\Word_Cookie_Solver\\Dictionary.txt', 'r') as file:  # opening the file
         dictionary = file.read()
         # using the .split method to convert each word in the file to func individual and collectively as func list
         words = dictionary.split()
