@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.loading_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(250, 198, 120);
+    flex-direction: column
+}
+
+h1{
+    color: brown;
+    margin-bottom: 2em
+}
+
+.neumorphism{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:300px;
+    width: 300px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    box-shadow: -5px -5px 7px #ffffff73,5px 5px 7px rgba(94,104,121,.288);
+    animation: cookie 2s infinite forwards ease-in-out
+}
+
+.neumorphism .sm_neumorphism{
+    height: 90%;
+    width: 90%;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 7px #58585873, inset 5px 5px 7px rgba(94,104,121,.288);
+    padding: 1em;
+    position: relative;
+}
+
+
+.neumorphism .sm_neumorphism h2{
+    position: absolute;
+    font-size: 3rem;
+    color: brown
+}
+
+h2:nth-child(1){
+    left: 43%
+}
+
+h2:nth-child(2){
+    top: 40%
+}
+
+h2:nth-child(3){
+    top: 75%;
+    left: 43%
+}
+
+h2:nth-child(4){
+    top: 40%;
+    right: 10%
+}
+
+@keyframes cookie{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
