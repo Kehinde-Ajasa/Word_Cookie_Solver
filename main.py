@@ -1,32 +1,14 @@
 """This code is used to solve the word cookies game"""
 import itertools
+from sorted_dictionary import my_dict
+
+arranged_dictionary = my_dict
 
 
 def get_user_input():
     """Function to help accept the user's input and store"""
     word_cookie = input('Enter the word in the word cookie tray(in any order):  ')
     return word_cookie
-
-
-def open_dict_file():
-    """function to help open up the dictionary file for accessing all the english language words"""
-    with open('C:\\Users\\MY PC\\PycharmProjects\\Word_Cookie_Solver\\Dictionary.txt', 'r') as file:  # opening the file
-        dictionary = file.read()
-        # using the .split method to convert each word in the file to func individual and collectively as func list
-        words = dictionary.split()
-        return words
-
-
-def sort_dictionary(func):
-    """Function to help sort the dictionary in terms of amount of letters they contain"""
-    word_dictionary = {}
-    for w in func:
-        word_length = len(w)
-        if str(word_length) in word_dictionary:
-            word_dictionary[str(word_length)] += f' {w}'
-        else:
-            word_dictionary[str(word_length)] = w
-    return word_dictionary
 
 
 def create_anagrams(function1, function2):
@@ -63,5 +45,4 @@ def display_final_result(data):
         print(f"{result} letter words-->{data[result]}")
 
 
-display_final_result(n_letter_words((create_anagrams(sort_dictionary(open_dict_file()), get_user_input()))))
-
+display_final_result(n_letter_words((create_anagrams(arranged_dictionary, get_user_input()))))

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Word_Cookie_Solver.iml" filepath="$PROJECT_DIR$/.idea/Word_Cookie_Solver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../dictionary/.idea/dictionary.iml" filepath="$PROJECT_DIR$/../dictionary/.idea/dictionary.iml" />
     </modules>
   </component>
 </project>
