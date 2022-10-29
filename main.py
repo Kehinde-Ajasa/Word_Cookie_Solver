@@ -1,6 +1,6 @@
 """This code is used to solve the word cookies game"""
 import itertools
-from sorted_dictionary import my_dict
+from sorted_dictionary import *
 
 arranged_dictionary = my_dict
 
