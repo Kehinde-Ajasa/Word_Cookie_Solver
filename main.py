@@ -13,11 +13,7 @@ def open_dictionary_file():
 def word_cookies_dictionary(a_function):
     """Creating a dictionary with the keys as a casted number to string
     and values as empty list that would get words appended during sorting."""
-    universal_dictionary = {'1': [], '2': [], '3': [], '4': [], '5': [],
-                                        '6': [], '7': [], '8': [], '9': [], '10': [],
-                                        '11': [], '12': [], '13': [], '14': [], '15': [],
-                                        '16': [], '17': [], '18': [], '19': [], '20': [],
-                                        '21': [], '22': [], '23': [], '24': [], '25': [], '26': [], }
+    universal_dictionary = {}
     for i in a_function:
         if str(len(i)) in universal_dictionary:
             universal_dictionary[str(len(i))].append(i)
@@ -51,12 +47,11 @@ def create_anagrams(function1, function2):
 def n_letter_words(data):
     """Function to arrange the result gotten in terms of length of letters"""
     arranged_results = dict()
-    for word in data:
-        length_of_word = len(word)
-        if str(length_of_word) in arranged_results:
-            arranged_results[str(length_of_word)] += f', {word} '
+    for i in data:
+        if str(len(i)) in arranged_results:
+            arranged_results[str(len(i))].append(i)
         else:
-            arranged_results[str(length_of_word)] = word
+            arranged_results[str(len(i))] = []
     return arranged_results
 
 
