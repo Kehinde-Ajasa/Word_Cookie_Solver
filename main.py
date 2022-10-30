@@ -3,7 +3,7 @@ import itertools
 
 
 def open_dictionary_file():
-    """Opening up the file containing over 350 thousand words"""
+    """Opening up the file containing over 350 thousand word"""
     with open('C:\\Users\\MY PC\\Desktop\\PYTHON PROJECTS\\Dictionary.txt', 'r') as filename:
         dic_file = filename.read()
         dic_list = dic_file.split()
