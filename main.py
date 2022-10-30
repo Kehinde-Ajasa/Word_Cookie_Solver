@@ -19,12 +19,19 @@ def word_cookies_dictionary(a_function):
             universal_dictionary[str(len(i))].append(i)
         else:
             universal_dictionary[str(len(i))] = []
+    for item in universal_dictionary:
+        universal_dictionary[item] = dict()
+    for val in a_function:
+        if str(len(val)) in universal_dictionary and val[0] in universal_dictionary[str(len(val))]:
+            universal_dictionary[str(len(val))][val[0]].append(val)
+        else:
+            universal_dictionary[str(len(val))][val[0]] = []
     return universal_dictionary
 
 
 def get_user_input():
     """Function to help accept the user's input and store"""
-    word_cookie = input('Enter the word in the word cookie tray(in any order):  ')
+    word_cookie = input('Enter the word in the word cookie tray(in any order):  ').lower()
     return word_cookie
 
 
@@ -37,7 +44,7 @@ def create_anagrams(function1, function2):
         for j in results:
             word_get = ''.join(j)
             # checking if func word is in the particular key
-            if word_get in function1[str(len(word_get))]:
+            if word_get in function1[str(len(word_get))][word_get[0]]:
                 final_result.append(word_get)
             else:
                 pass
