@@ -1,8 +1,5 @@
 """This code is used to solve the word cookies game"""
 import itertools
-from sorted_dictionary import my_dict
-
-arranged_dictionary = my_dict  # try copying the code and running it in other editors other than pycharm
 
 
 def get_user_input():
