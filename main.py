@@ -60,10 +60,4 @@ def n_letter_words(data):
     return arranged_results
 
 
-def display_final_result(data):
-    """Function to return the final result in a formatted loop"""
-    for result in data:
-        print(f"{result} letter words-->{data[result]}")
-
-
-display_final_result(n_letter_words((create_anagrams(word_cookies_dictionary(open_dictionary_file()), get_user_input()))))
+print(n_letter_words((create_anagrams(word_cookies_dictionary(open_dictionary_file()), get_user_input()))))
