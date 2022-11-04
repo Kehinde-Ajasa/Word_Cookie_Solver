@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; 
+}
+
+.container{
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+}
+
+.shadow{
+    position: absolute;
+    min-height: 100vh;
+    background:rgba(0,0,0,0.5);
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    display: none;
+}
+
+.loading_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 3s ease-out;
+    min-height: 100vh;
+}
+
+.neumorphism{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:280px;
+    width: 280px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    animation: cookie 2s infinite forwards ease-in-out;
+    transition: 3s ease-in-out;
+    overflow: hidden;
+}
+
+.neumorphism .sm_neumorphism{
+    height: 90%;
+    width: 90%;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 7px #58585873, inset 5px 5px 7px rgba(94,104,121,.288);
+    padding: 1em;
+    position: relative;
+    transition: 3s ease-in-out;
+    overflow: hidden;
+}
+
+.neumorphism .sm_neumorphism h2{
+    position: absolute;
+    font-size: 3rem;
+    color: rgb(192, 128, 0); 
+}
+
+h2:nth-child(1){
+    left: 43%
+}
+
+h2:nth-child(2){
+    top: 40%
+}
+
+h2:nth-child(3){
+    top: 75%;
+    left: 43%
+}
+
+h2:nth-child(4){
+    top: 40%;
+    right: 10%
+}
+
+@keyframes cookie{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 2em
+}
+
+header h2{
+    color: rgb(192, 128, 0); 
+    font-size: 3rem;
+    margin-left: 15px
+}
+
+/* main */
+
+.input_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0 
+}
+
+.input_section input{
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    border:3px solid black;
+    outline: none;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold
+}
+
+.input_section input::placeholder{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold
+}
+
+
+.input_section button{
+    border: none;
+    background: rgb(192, 128, 0); 
+    color: white;
+    margin-top: 1em;
+    width: 200px;
+    padding: 15px 0;
+    border-radius: 5px;;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    outline: none
+}
+
+/* horizontal line */
+
+hr{
+    border: 2px solid rgb(126, 84, 0)
+}
+
+/* result */
+
+.letters{
+    position: relative;
+    height: 100%;
+    padding: 2em;
+    padding-top: 0;
+    width: 100%;
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    display: none
+
+}
+
+.n_words_container{
+    padding-top: 3em;
+}
+
+.count_words{
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.5em
+}
+
+.word_block{
+    margin: 0
+}
+
+.letter_block{
+    background: rgba(128, 67, 38, 1);
+    border: 2px solid black;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.7em;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase
+
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+@media (max-width:767px){
+    /* header */
+
+    header{
+        padding-top: 2em;
+    }
+    
+    header img{
+        width: 300px;
+        height: auto;
+    }
+        
+    header h2{
+        font-size: 2.8rem;
+        margin-left: 11px
+    }
+}
+
+@media (max-width:450px){
+
+    .neumorphism{
+        height:230px;
+        width: 230px;
+    }
+
+    .neumorphism .sm_neumorphism h2{
+        font-size: 2rem;
+    }
+
+    /* header */
+
+    header{
+        padding-top: 2em;
+    }
+    
+    header img{
+        width: 200px;
+        height: auto;
+    }
+        
+    header h2{
+        font-size: 2rem;
+        margin-left: 11px
+    }
+
+    /* main */
+
+    .input_section input{
+        width: 80%;
+        height: 60px;
+        font-size: 1rem;
+        text-align: center
+    }
+
+    .input_section input::placeholder{
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold
+    }
+
+    .input_section button{
+        width: 150px;
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+
+    /* result */
+
+    .n_words_container{
+        padding-top: 2em;
+    }
+
+    .count_words{
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 0.5em
+    }
+
+    .word_block{
+        margin: 0
+    }
+
+    .letter_block{
+        height: 45px;
+        width: 45px;
+        margin-right: 0.5em;
+        font-size: 1rem;
+    }
+}
