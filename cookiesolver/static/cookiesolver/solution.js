@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded',function(){
             // 
             const input_value = document.querySelector('input')
             // 
-            sendUserInput(input_value.value)
+            sendUserInput(input_value.value.toLowerCase())
             // 
             retrieveOutput()
             // 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded',function(){
     function popup(){
         document.querySelector('.shadow').style.display = 'none'
         // 
-        document.querySelector('.letters').style.display = 'block'
+        document.querySelector('.letters').style.opacity = '1'
         //  
     }
     
@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded',function(){
                         div_element.append(letters_section)
                     })
                     document.querySelector('.letters').append(div_element)
+                    document.querySelector('.letters').style.opacity = 0
                 }
             }
         })
