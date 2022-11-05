@@ -1,0 +1,38 @@
+{% load static   %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORD COOKIE SOLVER</title>
+    <link rel="stylesheet" href="{% static 'cookiesolver/solution.css' %}"/>
+    <script src="{% static 'cookiesolver/solution.js' %}"></script>
+</head>
+<body>
+    <div class="shadow">
+        <main class="loading_container">
+            <div class="neumorphism">
+                <div class="sm_neumorphism">
+                    <h2>W</h2>
+                    <h2>D</h2>
+                    <h2>R</h2>
+                    <h2>O</h2>
+                </div>
+            </div>   
+        </main>
+    </div>
+    <section class="container">
+        <header>
+            <img src="{% static 'cookiesolver/images/cookie_logo.png' %}" alt=""> 
+            <h2>Solver</h2>
+        </header>
+        <div class="input_section">
+            <input id="tray" type="text" placeholder="Enter letters in tray">
+            <button>Unscramble</button>
+        </div>
+        <hr>
+    </section>
+    <div class="letters"></div>
+</body>
+</html>

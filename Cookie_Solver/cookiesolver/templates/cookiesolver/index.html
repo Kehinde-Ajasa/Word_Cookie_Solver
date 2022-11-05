@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORD COOKIE SOLVER</title>
+    <link rel="stylesheet" href="{% static 'cookiesolver/styles.css' %}">
+</head>
+<body>
+    <section class="container">
+        <!-- head -->
+        <header>
+            <img src="{% static 'cookiesolver/images/cookie_logo.png' %}" alt=""> 
+            <h2>Solver</h2>
+        </header>
+        <!-- main -->
+        <main class="loading_container">
+            <div class="neumorphism">
+                <div class="sm_neumorphism">
+                    <h2>J</h2>
+                    <h2>E</h2>
+                    <h2>D</h2>
+                    <h2>1</h2>
+                </div>
+            </div>  
+            <a href="{% url 'solution' %}"><button>Get Started</button> </a>    
+        </main>
+        <!-- footer -->
+        <footer>
+            <h4><a href="">From Tech With Ken Academy</a></h4>
+        </footer>
+    </section>
+</body>
+</html>

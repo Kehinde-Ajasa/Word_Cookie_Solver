@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+}
+
+/* header */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 2em
+}
+
+header h2{
+    color: rgb(192, 128, 0); 
+    font-size: 3rem;
+    margin-left: 15px
+}
+
+/* main */
+
+.loading_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 3s ease-out;
+    padding-top: 3em
+}
+
+.neumorphism{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:280px;
+    width: 280px;
+    background: #2a2a2a;
+    border-radius: 50%;
+    animation: cookie 2s infinite forwards ease-in-out;
+    overflow: hidden;
+}
+
+.neumorphism .sm_neumorphism{
+    height: 90%;
+    width: 90%;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: inset -5px -5px 7px #58585873, inset 5px 5px 7px rgba(94,104,121,.288);
+    padding: 1em;
+    position: relative;
+    overflow: hidden;
+}
+
+.neumorphism .sm_neumorphism h2{
+    position: absolute;
+    font-size: 3rem;
+    color: rgb(192, 128, 0); 
+}
+
+h2:nth-child(1){
+    left: 43%
+}
+
+h2:nth-child(2){
+    top: 40%
+}
+
+h2:nth-child(3){
+    top: 75%;
+    left: 43%
+}
+
+h2:nth-child(4){
+    top: 40%;
+    right: 10%
+}
+
+@keyframes cookie{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loading_container button{
+    /* font(Tahoma, bold) - color(white) - font size (50 or below) center aligned */
+    margin-top: 25px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    width: 130px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(163, 109, 1); 
+    font-size: 1.1rem;
+    padding: 10px  0
+}
+
+/* footer */
+
+footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+footer h4 a{
+    /* font(Tahoma)*/
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(192, 128, 0); 
+    text-decoration: none
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+@media (max-width:450px){
+
+    /* header */
+
+    header{
+        padding-top: 2em;
+    }
+
+    header img{
+        width: 180px;
+        height: auto;
+    }
+    
+    header h2{
+        font-size: 1.8rem;
+        margin-left: 11px
+    }
+
+    /* main */
+
+    .loading_container{
+        margin:50px 0;
+        padding: 0
+    }
+
+    .neumorphism{
+        height:230px;
+        width: 230px;
+    }
+
+    .neumorphism .sm_neumorphism h2{
+        font-size: 2rem;
+    }
+
+    h2:nth-child(1){
+        left: 45%
+    }
+    
+    h2:nth-child(3){
+        top: 75%;
+        left: 45%
+    }
+
+    .loading_container button{
+        /* font(Tahoma, bold) - color(white) - font size (50 or below) center aligned */
+        font-size: 0.89rem;
+        padding: 10px 0
+    }
+    
+    /* footer */
+
+    footer{
+        position: relative;
+        height: 10vh;
+    }
+
+    footer h4 a{
+        font-size: 1rem;
+    }
+
+    
+}
