@@ -18,20 +18,26 @@ document.addEventListener('DOMContentLoaded',function(){
     console
     // function gets user input save it into a variable and send it to django view to work with through the sendUserInput function
     document.querySelector('button').addEventListener('click',function(){
-        // 
-        document.querySelector('.shadow').style.display = 'block'
-        // 
-        var result_container = document.querySelector('.letters')
-        result_container.innerHTML = " "
-        // 
-        const input_value = document.querySelector('input')
-        // 
-        sendUserInput(input_value.value)
-        // 
-        retrieveOutput()
-        // 
-        document.querySelector('input').value = ""
-        setTimeout(popup,5000)
+        const user_input = document.querySelector('input').value
+        if(user_input.length > 6 ){
+            alert('Input must not be grater than 6 words')
+        }
+        else{
+            // 
+            document.querySelector('.shadow').style.display = 'block'
+            // 
+            var result_container = document.querySelector('.letters')
+            result_container.innerHTML = " "
+            // 
+            const input_value = document.querySelector('input')
+            // 
+            sendUserInput(input_value.value)
+            // 
+            retrieveOutput()
+            // 
+            document.querySelector('input').value = ""
+            setTimeout(popup,5000)
+        }
     })
 
     function popup(){
