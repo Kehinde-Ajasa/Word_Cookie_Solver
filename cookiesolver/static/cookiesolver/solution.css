@@ -178,9 +178,11 @@ header h2{
     border-radius: 0 5px 5px 0;
     padding-left: 10px;
     font-size: 1rem;
-    color: rgba(0, 0, 0, 0.653);
-    font-weight: bold
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background: rgb(126, 84, 0)
 }
+
 
 .input_section button{
     border: none;
@@ -307,17 +309,12 @@ hr{
         text-align: center
     }
 
-    .input_section input::placeholder{
-        text-align: center;
-        font-size: 1rem;
-        font-weight: bold
-    }
-
     .input_section .tray_container input{
         height: 100%;
         font-size: 1rem;
         text-align: center;
-        width: 70%
+        width: 70%;
+        font-weight: bold
     }
 
     .input_section button{
@@ -328,7 +325,7 @@ hr{
     
     .input_section .tray_container input::placeholder{
         text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: bold
     }
     
