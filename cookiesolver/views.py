@@ -7,9 +7,12 @@ import itertools
 # Create your views here.
 def index(request):
     return render(request,'cookiesolver/index.html')
-
+    
 def solution(request):
     return render(request,'cookiesolver/solution.html')
+
+def about(request):
+    return render(request,'cookiesolver/about.html')
 
 @csrf_exempt
 def getUserInput(request):

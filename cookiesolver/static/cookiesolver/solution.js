@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded',function(){
         }
         else{
             if (word_count > user_input.length){
-                alert('Letter count must be equal to or greater than entered value')
+                alert(`Word entered must be equal to or greater than ${word_count} letters`)
             }
             else{
                 // 
@@ -115,33 +115,39 @@ document.addEventListener('DOMContentLoaded',function(){
                     }
                 }
                 else{
-                    const values = data.answer
+                    const result_length = Object.keys(data.answer[numb]).length
                     // 
-                    const div_element = document.createElement('div')
-                    div_element.style.cssText = `margin-bottom:2em`
-                    div_element.className = 'n_words_container'
-                    // 
-                    const h1_element = document.createElement('h1')
-                    h1_element.innerHTML = `${numb} Letters`
-                    h1_element.className = 'count_words'
-                    div_element.append(h1_element)
-                    // 
-                    values[numb].forEach(function(word){
-                        const letters_section = document.createElement('section')
-                        letters_section.style.cssText = `display:flex;flex-direction:row;margin-bottom:2em`
-                        letters_section.className = 'word_block'
-                        // convert individual elements in an array into an array
-                        list_word = word.split('')
-                        list_word.forEach(function(list_word){
-                            const letter_container = document.createElement('div')
-                            letter_container.className = 'letter_block'
-                            letter_container.innerHTML = list_word
-                            letters_section.append(letter_container)
+                    if(result_length > 0){
+                        const values = data.answer
+                        const div_element = document.createElement('div')
+                        div_element.style.cssText = `margin-bottom:2em`
+                        div_element.className = 'n_words_container'
+                        // 
+                        const h1_element = document.createElement('h1')
+                        h1_element.innerHTML = `${numb} Letters`
+                        h1_element.className = 'count_words'
+                        div_element.append(h1_element)
+                        // 
+                        values[numb].forEach(function(word){
+                            const letters_section = document.createElement('section')
+                            letters_section.style.cssText = `display:flex;flex-direction:row;margin-bottom:2em`
+                            letters_section.className = 'word_block'
+                            // convert individual elements in an array into an array
+                            list_word = word.split('')
+                            list_word.forEach(function(list_word){
+                                const letter_container = document.createElement('div')
+                                letter_container.className = 'letter_block'
+                                letter_container.innerHTML = list_word
+                                letters_section.append(letter_container)
+                            })
+                            div_element.append(letters_section)
                         })
-                        div_element.append(letters_section)
-                    })
-                    document.querySelector('.letters').append(div_element)
-                    document.querySelector('.letters').style.opacity = 0
+                        document.querySelector('.letters').append(div_element)
+                      document.querySelector('.letters').style.opacity = 0
+                    }
+                    else{
+                        alert(`Could not get ${numb} letter words `)
+                    }
                 }
             }
             else{

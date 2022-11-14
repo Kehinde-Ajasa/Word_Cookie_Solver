@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box 
+}
+
+body{
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    color: rgba(128, 67, 38, 1);
+    padding-top: 1em;
+    width: 100%
+}
+
+.container h2{
+    font-size: 3rem;
+    text-align: center
+}
+
+.container .accounts{
+    padding: 3em
+}
+
+.container .accounts .devs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.container .accounts .devs .devs_logo{
+    display: flex;
+    justify-content: flex-start
+}
+
+.container .accounts .devs .devs_logo img{
+    height: 300px;
+    width: 400px
+}
+
+.container .accounts .devs .devs_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.container .accounts .devs .devs_info p{
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 30px;
+    letter-spacing: 1px
+}
+
+.container .accounts .devs .devs_info .links{
+    display: flex
+}
+
+.container .accounts .devs .devs_info a button{
+    background: rgba(128, 67, 38, 1);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 95px;
+    padding: 10px 0;
+    margin-top: 0.5em;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container .accounts .devs .devs_info a:last-child{
+    margin-left: 1em
+}
+
+/* share */
+#share{
+    min-height: 30vh;
+    background: rgb(173, 97, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white
+}
+
+#share h3{
+    font-size: 3rem
+}
+
+#share a button{
+    border: none;
+    color: rgb(173, 97, 62);
+    background: white;
+    border-radius: 60px;
+    padding: 0.8em 1.5em;
+    margin-top: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2rem
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+@media (max-width:800px){
+
+    .container .accounts{
+        padding: 1em
+    }
+
+    .devs{
+        padding: 0em;
+    }
+}
+
+
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+@media (max-width:450px){
+
+    .container{
+        padding: 0em;
+        margin: 0em
+    }
+
+    .container h2{
+        font-size: 2rem;
+    }
+
+    .container .accounts{
+        padding: 0em;
+        padding-top: 2em;
+    }
+    
+    .container .accounts .devs{
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 1em;
+        margin-bottom: 3em
+    }
+
+    .container .accounts .devs .devs_logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0em;
+    }
+
+    .container .accounts .devs .devs_logo img{
+        width: 80%;
+        height: 200px;
+        padding: 0em
+    }
+
+    .container .accounts .devs .devs_info{
+        padding: 0 0.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em
+    }
+
+    .container .accounts .devs .devs_info p{
+        text-align: center
+    }
+
+    /*  */
+
+    /* share */
+    #share{
+        padding: 2em 0
+    }
+
+    #share h3{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #share a button{
+        font-size: 1rem
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+}
+
+
+

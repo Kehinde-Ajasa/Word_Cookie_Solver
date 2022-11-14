@@ -9,7 +9,6 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow: hidden;
 }
 
 .container{
@@ -123,8 +122,10 @@ footer{
     bottom: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+    padding: 0 2em;
+    padding-bottom: 0.5em
 }
 
 footer h4 a{
@@ -134,6 +135,17 @@ footer h4 a{
     color: rgb(192, 128, 0); 
     text-decoration: none
 }
+
+footer button{
+    border: none;
+    border-radius: 5px; 
+    background: rgb(163, 109, 1);
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
 
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
@@ -189,12 +201,17 @@ footer h4 a{
     /* footer */
 
     footer{
+       min-height: 15vh;
         position: relative;
-        height: 10vh;
+        flex-direction: column;
     }
 
     footer h4 a{
         font-size: 1rem;
+    }
+
+    footer button{
+        margin-top: 1em
     }
 
     
