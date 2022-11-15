@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORD COOKIE SOLVER</title>
+    <link rel="stylesheet" href="{% static 'cookiesolver/admin.css' %}">
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            username = prompt('Enter admin password')
+            if(username === 'cookie_admin'){
+                alert('WELCOME')
+            }
+            else{
+                window.location.href = '/'
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>WELCOME ADMIN</h2>
+        <div class="messages">
+            {% for feedback in feedbacks %}
+                <div class="user">
+                    <p class="message">{{feedback.Message}}</p>
+                    <p class="email">{{feedback.Email}}</p>
+                    <h5 class="name">-{{feedback.Name}}</h5>
+                </div>
+            {% empty %}
+                <p>No feedbacks yet</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt a autem itaque aliquam! Recusandae harum neque exercitationem at omnis vitae. -->
+</html>

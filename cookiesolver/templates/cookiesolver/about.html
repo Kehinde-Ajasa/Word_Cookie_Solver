@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORD COOKIE SOLVER</title>
+    <link rel="stylesheet" href="{% static 'cookiesolver/about.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="top_nav">
+            <div class="nav_left">
+                <img src="{% static 'cookiesolver/images/cookie_logo.png' %}" alt=""> 
+            </div>
+            <div class="nav_right">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'solution' %}">Solver</a>
+            </div>
+        </div>
+        <!--  -->
+        <div class="accounts">
+            <!--  -->
+            <div class="devs">
+                <div class="devs_logo">
+                    <img src="{% static 'cookiesolver/images/techwithken.png' %}" alt="">
+                </div>
+                <div class="devs_info">
+                    <p>Hi, I am Kehinde Ajasa(Tech With Ken) an 18 year old Python Programmer passionate about Data Science, Machine Learning and Mathematics.</p>
+                    <div class="links">
+                        <a href="https://twitter.com/Tech_With_Ken?s=09"><button>Twitter</button></a>
+                        <a href="https://github.com/Kehinde-Ajasa"><button>Github</button></a>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="devs">
+                <div class="devs_logo">
+                    <img  src="{% static 'cookiesolver/images/jeditech.png' %}" alt="">
+                </div>
+                <div class="devs_info">
+                    <p>Hi, I am Okon Jedidiah(Jeditech) an 18 year old full stack web developer with knowlege of python,javascript and passionate about Artificial Intelligence and Machine Learning</p>
+                    <div class="link">
+                        <a href="https://twitter.com/Okon_Jedidiah?s=09"><button>Twitter</button></a>
+                        <a href="https://github.com/okondev2021"><button>Github</button></a>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+        <!--  -->
+        <section id="share">
+            <h3>How was your experience</h3>
+            <a href="{% url 'feedback' %}"><button>Give feedback</button></a>
+        </section>
+    </div>
+</body>
+</html>

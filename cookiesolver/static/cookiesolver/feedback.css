@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.container .form_div{
+    min-height: 70vh;
+    width: 40%;
+    background: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 2em
+}
+
+.container .form_div form{
+    padding: 0 2em;
+    padding-top: 2em;
+}
+
+.container .form_div h2{
+    text-align: center;
+    color: rgb(126, 84, 0);
+}
+
+.container .form_div form .input_div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em
+}
+
+.container .form_div form .input_div label{
+    color: rgb(126, 84, 0);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5em
+}
+
+.container .form_div form .input_div input{
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(126, 84, 0,0.5);
+    outline: none
+}
+
+.container .form_div form .input_div textarea{
+    height: 150px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(126, 84, 0,0.5);
+    outline: none
+}
+
+.container .form_div form .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em
+}
+
+.container .form_div form .submit input[type="submit"]{
+    width: 30%;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(to right,rgb(126, 84, 0),rgb(218, 150, 16));
+    color: white;;
+    cursor: pointer
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+@media (max-width:800px){
+    .container .form_div{
+        min-height: 70vh;
+        width: 80%;
+    }
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+@media (max-width:450px){
+    .container .form_div{
+        min-height: 80vh;
+        width: 85%;
+        padding: 2em 0 
+    }
+    
+    .container .form_div form .submit input[type="submit"]{
+        width: 40%;
+        height: 40px;
+    }
+}
+
+
+

@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    background: url('./images/cookie-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    padding-top: 2em
+}
+
+.container h2{
+    color: rgba(128, 67, 38, 1);
+    text-align: center;
+    font-size: 3rem
+}
+
+.container .messages{
+    margin-top: 2em;
+    padding-left: 2em
+}
+
+.container .messages .user{
+    border: 2px solid rgba(128, 67, 38, 1);
+    width: 50%;
+    padding: 1em;
+    margin-bottom: 1.5em
+}
+
+.container .messages .user .message{
+    color: rgba(128, 67, 38, 1);
+    font-weight: 600;
+    font-size: 1.1rem
+}
+
+.container .messages .user .email{
+    font-weight: bold;
+    padding-top: 5px
+}
+
+.container .messages .user .name{
+    text-align: right
+}
+
+@media (max-width:450px){
+
+    .container h2{
+        font-size: 2rem
+    }
+
+    .container .messages{
+        margin-top: 2em;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container .messages .user{
+        width: 90%;
+        border-radius: 10px
+    }
+    
+}
+
+
+

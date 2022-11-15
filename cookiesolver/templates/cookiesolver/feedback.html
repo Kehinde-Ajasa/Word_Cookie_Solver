@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORD COOKIE SOLVER</title>
+    <link rel="stylesheet" href="{% static 'cookiesolver/feedback.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="form_div">
+            <h2>FEEDBACK FORM</h2>
+            <form action="{% url 'feedback' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input_div">
+                    <label>Name:</label>
+                    <input name="username" type="text" placeholder="Enter Name">
+                </div>
+                <div class="input_div">
+                    <label>Email:</label>
+                    <input name="email" type="email" placeholder="Enter email">
+                </div>
+                <div class="input_div">
+                    <label>Message:</label>
+                    <textarea name="message" placeholder="Enter Message"></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

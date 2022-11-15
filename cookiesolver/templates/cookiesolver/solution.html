@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WORD COOKIE SOLVER</title>
+    <link rel="stylesheet" href="{% static 'cookiesolver/solution.css' %}">
+    <script src="{% static 'cookiesolver/solution.js' %}"></script>
+</head>
+<body>
+    <div class="shadow">
+        <main class="loading_container">
+            <div class="neumorphism">
+                <div class="sm_neumorphism">
+                    <h2>W</h2>
+                    <h2>D</h2>
+                    <h2>R</h2>
+                    <h2>O</h2>
+                </div>
+            </div>   
+        </main>
+    </div>
+    <section class="container">
+        <div class="top_nav">
+            <div class="nav_left">
+                <img src="{% static 'cookiesolver/images/cookie_logo.png' %}" alt=""> 
+            </div>
+            <div class="nav_right">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+            </div>
+        </div>
+        <div class="input_section">
+            <div class="tray_container">
+                <input id="tray" type="text" placeholder="Enter word in tray">
+                <div class="drop_down">
+                    <select name="" id="">
+                        <option value="All">All</option>
+                        <option value="3">3 letters</option>
+                        <option value="4">4 letters</option>
+                        <option value="5">5 letters</option>
+                        <option value="6">6 letters</option>
+                    </select>
+                </div>
+            </div>
+            <button>Unscramble</button>
+        </div>
+        <hr>
+    </section>
+    <div class="letters"></div>
+</body>
+</html>
