@@ -98,7 +98,7 @@ body{
 @media (max-width:450px){
     .container .form_div{
         min-height: 80vh;
-        width: 85%;
+        width: 90%;
         padding: 2em 0 
     }
     

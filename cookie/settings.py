@@ -79,8 +79,12 @@ WSGI_APPLICATION = 'cookie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd15hvicib8p5ff',
+        'HOST': 'ec2-3-224-184-9.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'nelugtfeutlfet',
+        'PASSWORD': '5a34d394c72f5b4218121bbc5e41b496cc6de87328eb73b8a05c4d543eb996e4',
     }
 }
 
